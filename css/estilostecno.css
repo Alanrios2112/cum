@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../img/fond1.jpg); /* Cambia por una imagen de fondo romántica */
+  background-size: cover;
+  font-family: 'Comic Sans MS', cursive;
+  text-align: center;
+  color: #000; /* Cambié el color de texto a negro para mejor contraste */
+}
+
+a {
+  text-decoration: none;
+}
+
+.contenedor-principal {
+  max-width: 1300px;
+  max-height: 1300px;
+  margin: 80px auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 1); /* Fondo blanco sin opacidad */
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contenedor_tarjeta {
+  margin: 65px;
+  display: inline-block;
+}
+
+.contenedor_tarjeta:hover figure {
+  transform: perspective(600px) rotateY(180deg);
+}
+
+.contenedor_tarjeta:hover figure img {
+  filter: blur(2.5px);
+}
+
+figure {
+  background-color: #FFFFFF; /* Fondo blanco */
+  width: 300px;
+  height: 350px;
+  margin: 0;
+  position: relative;
+  transition: all 0.8s ease;
+  transform-style: preserve-3d;
+  transform: perspective(600px) rotateY(0deg);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.frontal,
+.trasera {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  backface-visibility: hidden;
+}
+
+.frontal {
+  display: block;
+  background: #FFFFFF; /* Fondo blanco */
+  border-radius: 15px;
+}
+
+.trasera {
+  position: absolute;
+  top: 0px;
+  padding: 70px;
+  color: #000; /* Texto en negro para un buen contraste */
+  transform: perspective(600px) rotateY(180deg);
+  backface-visibility: hidden;
+  background-color: #FFFFFF; /* Fondo blanco */
+  border-radius: 15px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.trasera h1 {
+  font-weight: 700;
+  font-size: 34px;
+  color: #000; /* Texto en negro */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra suave */
+}
+
+.trasera p {
+  font-size: 13px;
+  font-weight: 400;
+  color: #000; /* Texto en negro */
+  font-family: 'Georgia', serif;
+  text-shadow: 1px 4px 21px rgba(246, 214, 193, 0.5);
+}
+
+h2::after,
+h2::before {
+  content: '';
+  position: absolute;
+  width: 90px;
+  height: 6px;
+  background-color: currentColor;
+  top: 0.7em;
+  transform: scale(1.0);
+  transition: all 0.6s ease-in;
+}
+
+h2:hover::after,
+h2:hover::before {
+  transform: scale(0.1);
+}
+
+h2::after {
+  left: 230px;
+}
+
+h2::before {
+  right: 230px;
+}
+
+h2 {
+  font-size: 70px;
+  font-weight: 70;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  color: #000; /* Texto en negro */
+}
+
+.titulo {
+  color: #000; /* Texto en negro */
+  font-size: 40px;
+  font-weight: 700;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.pre {
+  display: inline-block;
+  padding: 20px 40px;
+  border-radius: 100px;
+  background: #FFFFFF; /* Fondo blanco */
+  text-decoration: none;
+  color: #000; /* Texto en negro */
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.pre:hover {
+  background: #FFFFFF;
+  color: #000; /* Mantener el color negro en hover */
+}
+
+.btn_link:hover,
+.btn_link:active {
+  color: white;
+  background: black;
+}
